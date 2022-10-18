@@ -3,18 +3,29 @@
     min-height: 100vh;
 }
 
-header {
+.header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px; 
+    width: 80%;
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+
 }
 
 nav {
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+}
+
+.navlink {
+    margin-left: 10px;
 }
 
 .container {
@@ -25,10 +36,32 @@ nav {
 
 .content {
     width: 95%;    
+    padding-top: 50px
 }
 
 @media only screen and (min-width: 700px) {
     .content {
         width: 80%;        
     }
+}
+
+.card {
+    width: 300px;
+    margin: 0px 50px 50px 0;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+
+}
+
+.card-image {
+    width: 100%
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
 }

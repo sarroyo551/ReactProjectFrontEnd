@@ -6,15 +6,17 @@ function Header() {
   return (
 
     <header>
+      <div className='header-container'>
         <h1>UFC Champions</h1>
         <nav>
-            <NavLink>
+            <NavLink to='/' className='navlink'>
                 Home
             </NavLink>
-            <NavLink>
+            <NavLink to='/new' className='navlink'>
                 Add New Athlete
             </NavLink>
-        </nav>       
+        </nav> 
+      </div>      
     </header>
   )
 }
