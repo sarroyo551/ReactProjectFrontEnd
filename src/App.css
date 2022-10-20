@@ -120,6 +120,15 @@ label {
     font-size: 18px;
 }
 
+.submit-button {
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;    
+}
+
+.submit-button:hover {
+    background-color: rgb(214, 214, 212);
+}
 
 @media only screen and (min-width: 700px) {
     .content {

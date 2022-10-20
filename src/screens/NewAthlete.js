@@ -37,7 +37,7 @@ function NewAthlete() {
           <label>Height </label> 
           <input />
         </div>
-       
+        <button type='submit' className='submit-button'>Submit Fighter</button>
       </form>
     </div>
   )
