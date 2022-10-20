@@ -19,8 +19,18 @@ function AthleteDetails() {
 
   return (
     <div className='content'>
-      <h1>{fighter.name}</h1>      
-      
+      {fighter && (
+        <>
+        <h1>{fighter.name}</h1>
+        <img src={fighter.image} alt={fighter.name}/>
+        <h3>Weight: {fighter.weight}</h3>
+        <p>Reccord: {fighter.record}</p>
+        <p>Reach: {fighter.reach}</p>
+        <p>Country of Origin: {fighter['country of origin']}</p>
+        <p>Age: {fighter.age}</p>
+        <p>Height: {fighter.height}</p>
+        </>
+      )}      
       </div>
   )
 }
