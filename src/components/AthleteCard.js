@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function AthleteCard({fighter}) {
 
-  const {name, image, weight} = fighter
+  const {name, image, weight, id} = fighter
 
   return (
+    <Link to={`/details/${id}`}>
     <div className='card'>
         <img src={image} alt={name} className='card-image'/>
         <div className='card-details'>
@@ -12,6 +14,7 @@ function AthleteCard({fighter}) {
             <h4>{weight}</h4>
         </div>
     </div>
+    </Link>
   )
 }
 

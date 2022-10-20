@@ -14,7 +14,12 @@
 header {
     display: flex;
     justify-content: center;
+    background-color: black;
 
+}
+
+.header-title {
+    color:aliceblue
 }
 
 nav {
@@ -26,6 +31,8 @@ nav {
 
 .navlink {
     margin-left: 10px;
+    color:aliceblue;
+    text-decoration: none;
 }
 
 .container {
@@ -54,7 +61,12 @@ nav {
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
+    cursor: pointer;
+    transition: all .5s;    
+}
 
+.card:hover {
+    transform: scale(1.1);
 }
 
 .card-image {

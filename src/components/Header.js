@@ -7,7 +7,7 @@ function Header() {
 
     <header>
       <div className='header-container'>
-        <h1>UFC Champions</h1>
+        <h1 className='header-title'>UFC Champions</h1>
         <nav>
             <NavLink to='/' className='navlink'>
                 Home
