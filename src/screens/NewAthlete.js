@@ -3,16 +3,40 @@ import React from 'react'
 function NewAthlete() {
   return (
     <div className='content'>
-      <h1>Create Your Own Fighter</h1>
+      <h1 className='new-athlete-heading'>Create Your Own Fighter</h1>
       <form className='athlete-form'>
-        <label>Name  <input /> </label>
-        <label>Image  <input /> </label>
-        <label>Record  <input /> </label>
-        <label>Reach  <input /> </label>
-        <label>Country of Origin  <input /> </label>
-        <label>Weight <input /> </label>
-        <label>Age  <input /> </label>
-        <label>Height  <input /> </label>
+        <div className='form-details'>
+          <label>Name </label> 
+          <input />
+        </div>
+        <div className='form-details'>
+          <label>Image </label> 
+          <input />
+        </div>
+        <div className='form-details'>
+          <label>Record </label> 
+          <input />
+        </div>
+        <div className='form-details'>
+          <label>Reach </label> 
+          <input />
+        </div>
+        <div className='form-details'>
+          <label>Country of Origin </label> 
+          <input />
+        </div>
+        <div className='form-details'>
+          <label>Weight </label> 
+          <input />
+        </div>
+        <div className='form-details'>
+          <label>Age </label> 
+          <input />
+        </div>
+        <div className='form-details'>
+          <label>Height </label> 
+          <input />
+        </div>
        
       </form>
     </div>
