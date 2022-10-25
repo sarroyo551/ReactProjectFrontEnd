@@ -24,24 +24,39 @@ function NewAthlete() {
   } 
 
   function validateForm () {
-    if 
+    if (formData.name === '' ||
+       formData.image === '' ||
+       formData.record === '' || 
+       formData.reach === '' ||
+       formData['country of origin'] === '' ||
+       formData.weight === '' ||
+       formData.age === '' ||
+       formData.height === '') {
+      return false
+    } 
+    return true 
   }
 
   function handleSubmit (e) {
     e.preventDefault()
 
-    fetch('http://localhost:3000/Athletes', {
-      method: 'POST',
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-      .then((r) => r.json())
-      .then(() => {
-        navigate('/')
+    if (validateForm()) {
+      fetch('http://localhost:3000/Athletes', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
       })
+        .then((r) => r.json())
+        .then(() => {
+          navigate('/')
+        })
+    } else {
+      alert('Form incomplete')
+    return 
+    }
   } 
 
   return (
