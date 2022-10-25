@@ -1,13 +1,15 @@
 import {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
+
 
 function NewAthlete() {
-
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: '',
     image: '',
     record: '',
     reach: '',
-    country: '',
+    'country of origin': '',
     weight: '',
     age: '',
     height: ''
@@ -23,13 +25,24 @@ function NewAthlete() {
 
   function handleSubmit (e) {
     e.preventDefault()
-    
+    fetch('http://localhost:3000/Athletes', {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then((r) => r.json())
+      .then(() => {
+        navigate('/')
+      })
   } 
 
   return (
     <div className='content'>
       <h1 className='new-athlete-heading'>Create Your Own Fighter</h1>
-      <form className='athlete-form'>
+      <form className='athlete-form' onSubmit={handleSubmit}>
         <div className='form-details'>
           <label>Name </label> 
           <input name='name' onChange={handleChange} value={formData.name}/>
@@ -48,7 +61,7 @@ function NewAthlete() {
         </div>
         <div className='form-details'>
           <label>Country of Origin </label> 
-          <input name='country' onChange={handleChange} value={formData.country}/>
+          <input name='country of origin' onChange={handleChange} value={formData.country}/>
         </div>
         <div className='form-details'>
           <label>Weight </label> 

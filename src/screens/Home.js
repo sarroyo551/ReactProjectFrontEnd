@@ -13,6 +13,7 @@ function Home() {
       })
   },[])
 
+
   const fighterMap = fighters.map((item) => <AthleteCard key={item.id} fighter={item}/>)
 
 
