@@ -14,7 +14,16 @@ function NewAthlete() {
   })
 
   function handleChange (e) {
-    console.log(e.target.name)
+    // console.log(e.target.name)
+    setFormData({
+      ...formData, 
+      [e.target.name]: e.target.value
+    })
+  } 
+
+  function handleSubmit (e) {
+    e.preventDefault()
+    
   } 
 
   return (
@@ -23,35 +32,35 @@ function NewAthlete() {
       <form className='athlete-form'>
         <div className='form-details'>
           <label>Name </label> 
-          <input name='name' onChange={handleChange}/>
+          <input name='name' onChange={handleChange} value={formData.name}/>
         </div>
         <div className='form-details'>
           <label>Image </label> 
-          <input name='image' onChange={handleChange}/>
+          <input name='image' onChange={handleChange} value={formData.image}/>
         </div>
         <div className='form-details'>
           <label>Record </label> 
-          <input name='record' onChange={handleChange}/>
+          <input name='record' onChange={handleChange} value={formData.record}/>
         </div>
         <div className='form-details'>
           <label>Reach </label> 
-          <input name='reach' onChange={handleChange}/>
+          <input name='reach' onChange={handleChange} value={formData.reach}/>
         </div>
         <div className='form-details'>
           <label>Country of Origin </label> 
-          <input name='country' onChange={handleChange}/>
+          <input name='country' onChange={handleChange} value={formData.country}/>
         </div>
         <div className='form-details'>
           <label>Weight </label> 
-          <input name='weight' onChange={handleChange}/>
+          <input name='weight' onChange={handleChange} value={formData.weight}/>
         </div>
         <div className='form-details'>
           <label>Age </label> 
-          <input name='age' onChange={handleChange}/>
+          <input name='age' onChange={handleChange} value={formData.age}/>
         </div>
         <div className='form-details'>
           <label>Height </label> 
-          <input name='height' onChange={handleChange}/>
+          <input name='height' onChange={handleChange}  value={formData.height}/>
         </div>
         <button type='submit' className='submit-button'>Submit Fighter</button>
       </form>
