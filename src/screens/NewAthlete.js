@@ -23,9 +23,13 @@ function NewAthlete() {
     })
   } 
 
+  function validateForm () {
+    if 
+  }
+
   function handleSubmit (e) {
     e.preventDefault()
-    
+
     fetch('http://localhost:3000/Athletes', {
       method: 'POST',
       mode: 'cors',
