@@ -46,6 +46,16 @@ function NewAthlete() {
       })
         .then((r) => r.json())
         .then(() => {
+          setFormData({
+            name: '',
+            image: '',
+            record: '',
+            reach: '',
+            'country of origin': '',
+            weight: '',
+            age: '',
+            height: ''
+          })
           navigate('/')
         })
     } else {
