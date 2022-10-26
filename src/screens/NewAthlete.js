@@ -24,16 +24,11 @@ function NewAthlete() {
   } 
 
   function validateForm () {
-    if (formData.name === '' ||
-       formData.image === '' ||
-       formData.record === '' || 
-       formData.reach === '' ||
-       formData['country of origin'] === '' ||
-       formData.weight === '' ||
-       formData.age === '' ||
-       formData.height === '') {
-      return false
-    } 
+    for (let key in formData) {
+      if (formData[key] === '') {
+        return false
+      }
+    }
     return true 
   }
 
