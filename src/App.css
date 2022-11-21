@@ -82,6 +82,7 @@ nav {
 .athlete-image {
     border-radius: 10px;
     margin-right: 50px;
+    width: 100%;
 }
 
 .athlete-details >p, .athlete-details >h3 {
@@ -141,6 +142,9 @@ label {
         flex-direction: row;
     }    
     .form-details {
+        width: 50%;
+    }
+    .athlete-image {
         width: 50%;
     }
 

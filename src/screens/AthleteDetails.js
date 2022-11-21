@@ -5,6 +5,7 @@ function AthleteDetails() {
   const params = useParams();
   // console.log(params)
   const [fighter, setFighter] = useState(null);
+  //first render 'fighter' is null 
 
   useEffect(() => {
     fetch(`http://localhost:3000/Athletes/${params.id}`)
@@ -16,7 +17,7 @@ function AthleteDetails() {
 
   return (
     <div className="content">
-      {fighter && (
+      {fighter && ( 
         <>
           <h1>{fighter.name}</h1>
           <div className="details-page">
